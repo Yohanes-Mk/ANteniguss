@@ -1,0 +1,175 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+/* Scrollbar Hide */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hero Section Animation */
+@keyframes slideFade {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-slide-fade {
+  animation: slideFade 1.4s ease-out both;
+}
+.animate-fade-in-up {
+  animation: fadeInUp 1.6s ease-out both;
+}
+.animate-fade-in {
+  animation: fadeIn 2s ease-out both;
+}
+
+/* Background Overlays */
+.bg-blur-overlay {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Shared Sections */
+.section {
+  padding: 5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Motto Style */
+.reveal-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-in-out;
+}
+.reveal-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Background */
+.bg-hero {
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Motto Section */
+.bg-motto {
+  background-color: #1a1a1a;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Shared Background Section */
+.shared-bg {
+  background-image: linear-gradient(to bottom, rgba(28, 25, 23, 0.95), rgba(28, 25, 23, 0.95)),
+                    url('assets/images/left half and 3 cusine.JPG');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Font Weight and Tracking */
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Cards / Blurred Panels */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-10px);
+}
+
+
+/* Tailwind doesn’t include this by default */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInSlow {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-slow {
+  animation: fadeInSlow 2s ease-out forwards;
+}
+
+@keyframes scrollPortfolioLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7)); /* Adjust "7" based on card count */
+  }
+}
+
+.portfolio-scroll {
+  display: flex;
+  animation: scrollPortfolioLoop 40s linear infinite;
+  will-change: transform;
+}
+
+.portfolio-scroll:hover {
+  animation-play-state: paused;
+}
