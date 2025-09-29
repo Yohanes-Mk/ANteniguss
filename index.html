@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Discover Anteniguss — a multidisciplinary studio crafting refined interiors, fashion, and experiences." />
     <title>Anteniguss Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 
@@ -12,233 +19,165 @@
 
 <body class="bg-black text-white font-sans overflow-x-hidden">
     <header class="fixed top-0 left-0 w-full z-50 border-b border-white/10">
-        <nav class="backdrop-blur-md bg-black/60 h-20 flex items-center justify-between px-6 md:px-10">
+        <nav class="backdrop-blur-md bg-black/60 h-20 flex items-center justify-between px-6 md:px-10"
+            aria-label="Primary">
             <!-- Left: Logo + Brand -->
             <div class="flex items-center space-x-4">
                 <img src="assets/Logos/Antenigusse_Top_Logo.png" alt="Logo" class="w-8 h-8">
-                <a href="#" class="text-2xl font-serif text-white tracking-widest leading-none">ANTENIGUSS</a>
+                <a href="#home" class="text-2xl font-serif text-white tracking-widest leading-none">ANTENIGUSS</a>
             </div>
 
             <!-- Right: Navigation Links -->
             <ul
                 class="flex items-center space-x-8 md:space-x-10 text-white/80 text-sm md:text-base tracking-wide uppercase font-light">
-                <li><a href="#design" class="hover:text-white transition">Design</a></li>
                 <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                <li><a href="#design" class="hover:text-white transition">Design</a></li>
                 <li><a href="#wear" class="hover:text-white transition">Wear</a></li>
                 <li><a href="#works" class="hover:text-white transition">Works</a></li>
             </ul>
         </nav>
     </header>
-    <!-- 🔹 HERO SECTION: CLASSY, MINIMALIST, ELEGANT -->
+    <main class="pt-20">
+        <!-- 🔹 HERO SECTION: CLASSY, MINIMALIST, ELEGANT -->
+        <section id="home"
+            class="hero-section relative w-full min-h-screen overflow-hidden flex items-center justify-center text-white font-serif">
+            <div class="hero-background" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
 
-    <section class="relative w-full h-screen overflow-hidden flex items-center justify-center text-white font-serif">
-        
-        <!-- Background Image -->
-        <div class="absolute inset-0 bg-[url('/assets/textures/noise.png')] opacity-5 pointer-events-none"></div>
-
-        <div class="absolute inset-0 bg-cover bg-center bg-fixed scale-10 opacity-60 transition-all duration-1000"
-            style="background-image: url('assets/images/black\ \ 2.jpg');">
-        </div>
-
-        <!-- Text Content -->
-        <div class="relative z-10 text-center animate-fade-in-up">
-            <h1 class="text-6xl md:text-8xl tracking-widest font-light animate-slide-fade">ANTENIGUSS</h1>
-            <div class="mt-6 w-16 h-[3px] bg-white/60 mx-auto animate-fade-in delay-500"></div>
-
-        </div>
-        <div class="absolute bottom-10 animate-bounce">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M19 9l-7 7-7-7"/>
-            </svg>
-          </div>
-          
-    </section>
-
-    <style>
-        @keyframes floatUp {
-            0% {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .animate-float-up {
-            animation: floatUp 1.4s ease-out forwards;
-        }
-
-        @keyframes slideFade {
-            0% {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .animate-slide-fade {
-            animation: slideFade 1.4s ease-out both;
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 1.6s ease-out both;
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 2s ease-out both;
-        }
-    </style>
-
-
-
-
-    <!-- 🔹 MOTTO / BEAUTY USEFULLY SECTION WITH SPLIT REVEAL -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background Image -->
-    <div class="absolute inset-0 bg-[url('assets/images/left%20half%20and%203%20cusine.JPG')] bg-cover bg-center bg-fixed brightness-[.4]"></div>
-  
-    <!-- Split Text Animation Container -->
-    <div class="relative z-10 flex flex-col items-center space-y-12">
-      <div class="flex w-full justify-center items-center">
-        <!-- Left: BEAUTY -->
-        <div class="overflow-hidden">
-          <h2 class="text-5xl md:text-7xl text-white font-serif tracking-wider animate-reveal-left px-4">
-            Beauty
-          </h2>
-        </div>
-  
-        <!-- Right: USEFULLY -->
-        <div class="overflow-hidden">
-          <h2 class="text-5xl md:text-7xl text-white font-serif tracking-wider animate-reveal-right px-4">
-            Usefully
-          </h2>
-        </div>
-      </div>
-  
-      <!-- Subtext -->
-      <p class="text-xl md:text-2xl text-white/80 font-light tracking-widest text-center max-w-3xl animate-fade-in-slow">
-        A feeling. A philosophy. A standard.
-      </p>
-    </div>
-  </section>
-  
-
-    <!-- 🔹 SUBSIDIARIES SECTION -->
-    <section class="relative min-h-screen py-40 px-6 md:px-20 text-white overflow-hidden">
-        <!-- Blurred Background Layer -->
-        <div class="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
-            style="background-image: url('assets/images/stack cousine.PNG'); filter: brightness(0.4);">
-        </div>
-        <div class="absolute inset-0 z-10 bg-black/30 backdrop-blur-sm"></div>
-
-        <!-- Main Content Layer -->
-        <div class="relative z-20">
-            <h2 class="text-5xl md:text-6xl font-bold text-center font-serif mb-16">Our Subsidiaries</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-stretch">
-
-                <!-- DESIGN -->
-                <div
-                    class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-black/40 backdrop-blur-sm hover:shadow-2xl transition-all duration-700">
-                    <img src="assets/images/2 chairs classy dark.jpg" alt="Design"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
-                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
-                            <svg class="w-14 h-14 mb-4 text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500"
-                                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path d="M15.232 5.232a3 3 0 0 1 4.243 4.243L8.5 20.5 3 21l.5-5.5 11.732-11.268z" />
-                            </svg>
-                            <h3 class="text-3xl font-serif tracking-wide mb-4">Design</h3>
-                        </div>
-                        <p class="text-white/80 text-lg opacity-0 group-hover:opacity-100 transition duration-500">
-                            Elegant spaces shaped with bold vision and detailed craftsmanship.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- HOME -->
-                <div
-                    class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-black/40 backdrop-blur-sm hover:shadow-2xl transition-all duration-700">
-                    <img src="assets/images/brown.jpg" alt="Home"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
-                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
-                            <svg class="w-14 h-14 mb-4 text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500"
-                                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path d="M3 9.75L12 3l9 6.75v9a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 18.75v-9z" />
-                                <path d="M9 22V12h6v10" />
-                            </svg>
-                            <h3 class="text-3xl font-serif tracking-wide mb-4">Home</h3>
-                        </div>
-                        <p class="text-white/80 text-lg opacity-0 group-hover:opacity-100 transition duration-500">
-                            Curated furnishings that blend heritage with function and taste.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- WEAR -->
-                <div
-                    class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-black/40 backdrop-blur-sm hover:shadow-2xl transition-all duration-700">
-                    <img src="assets/images/Green bag floral bg.jpg" alt="Wear"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
-                        <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
-                            <svg class="w-14 h-14 mb-4 text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500"
-                                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path d="M16 10V6a4 4 0 0 0-8 0v4m-4 4h16l-1.5 9h-13L4 14z" />
-                            </svg>
-                            <h3 class="text-3xl font-serif tracking-wide mb-4">Wear</h3>
-                        </div>
-                        <p class="text-white/80 text-lg opacity-0 group-hover:opacity-100 transition duration-500">
-                            Minimalist fashion with timeless identity and comfort.
-                        </p>
-                    </div>
-                </div>
-
+            <!-- Text Content -->
+            <div class="relative z-10 text-center animate-fade-in-up px-4">
+                <h1 class="text-5xl md:text-8xl tracking-widest font-light animate-slide-fade">ANTENIGUSS</h1>
+                <div class="mt-6 w-16 h-[3px] bg-white/60 mx-auto animate-fade-in delay-500"></div>
             </div>
-        </div>
-    </section>
+
+            <a href="#motto" class="absolute bottom-10 animate-bounce text-center" aria-label="Scroll to motto">
+                <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
+        </section>
 
 
-    <!-- 🔹 OUR ESSENCE SECTION -->
-    <section class="text-white font-serif overflow-hidden">
-        <!-- Top: Core Values -->
-        <div class="bg-[#244b5a] bg-opacity-70 py-20 px-6 md:px-20 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-16">Our Essence</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- Value 1 -->
+
+
+        <!-- 🔹 MOTTO / BEAUTY USEFULLY SECTION WITH SPLIT REVEAL -->
+        <section id="motto" class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-[url('assets/images/left%20half%20and%203%20cusine.JPG')] bg-cover bg-center bg-fixed brightness-[.45]"
+                aria-hidden="true"></div>
+
+            <div class="relative z-10 flex flex-col items-center space-y-12 px-4 text-center">
+                <div class="flex flex-col md:flex-row w-full justify-center items-center">
+                    <!-- Left: BEAUTY -->
+                    <div class="overflow-hidden">
+                        <h2 class="text-5xl md:text-7xl text-white font-serif tracking-wider animate-reveal-left px-4">
+                            Beauty
+                        </h2>
+                    </div>
+
+                    <!-- Right: USEFULLY -->
+                    <div class="overflow-hidden">
+                        <h2 class="text-5xl md:text-7xl text-white font-serif tracking-wider animate-reveal-right px-4">
+                            Usefully
+                        </h2>
+                    </div>
+                </div>
+
+                <p class="text-xl md:text-2xl text-white/80 font-light tracking-widest max-w-3xl animate-fade-in-slow">
+                    A feeling. A philosophy. A standard.
+                </p>
+            </div>
+        </section>
+  
+
+        <!-- 🔹 SUBSIDIARIES SECTION -->
+        <section class="relative min-h-screen py-40 px-6 md:px-20 text-white overflow-hidden">
+            <div class="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
+                style="background-image: url('assets/images/stack cousine.PNG'); filter: brightness(0.4);" aria-hidden="true">
+            </div>
+            <div class="absolute inset-0 z-10 bg-black/30 backdrop-blur-sm" aria-hidden="true"></div>
+
+            <div class="relative z-20">
+                <h2 class="text-5xl md:text-6xl font-bold text-center font-serif mb-16">Our Subsidiaries</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-stretch">
+
+                    <!-- DESIGN -->
+                    <article id="design"
+                        class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-black/40 backdrop-blur-sm hover:shadow-2xl transition-all duration-700 focus-within:ring-2 focus-within:ring-white/60">
+                        <img src="assets/images/2 chairs classy dark.jpg" alt="Interior design vignette with sculptural chairs"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" aria-hidden="true"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+                            <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                                <svg class="w-14 h-14 mb-4 text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M15.232 5.232a3 3 0 0 1 4.243 4.243L8.5 20.5 3 21l.5-5.5 11.732-11.268z" />
+                                </svg>
+                                <h3 class="text-3xl font-serif tracking-wide mb-4">Design</h3>
+                            </div>
+                            <p class="text-white/80 text-lg opacity-0 group-hover:opacity-100 transition duration-500">
+                                Elegant spaces shaped with bold vision and detailed craftsmanship.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- HOME -->
+                    <article
+                        class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-black/40 backdrop-blur-sm hover:shadow-2xl transition-all duration-700 focus-within:ring-2 focus-within:ring-white/60">
+                        <img src="assets/images/brown.jpg" alt="Warm interior styling with plush sofa"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" aria-hidden="true"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+                            <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                                <svg class="w-14 h-14 mb-4 text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M3 9.75L12 3l9 6.75v9a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 18.75v-9z" />
+                                    <path d="M9 22V12h6v10" />
+                                </svg>
+                                <h3 class="text-3xl font-serif tracking-wide mb-4">Home</h3>
+                            </div>
+                            <p class="text-white/80 text-lg opacity-0 group-hover:opacity-100 transition duration-500">
+                                Curated furnishings that blend heritage with function and taste.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- WEAR -->
+                    <article id="wear"
+                        class="group relative overflow-hidden rounded-xl aspect-[3/4] bg-black/40 backdrop-blur-sm hover:shadow-2xl transition-all duration-700 focus-within:ring-2 focus-within:ring-white/60">
+                        <img src="assets/images/Green bag floral bg.jpg" alt="Green Anteniguss handbag with floral backdrop"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" aria-hidden="true"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
+                            <div class="transform transition-transform duration-500 group-hover:-translate-y-12">
+                                <svg class="w-14 h-14 mb-4 text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M16 10V6a4 4 0 0 0-8 0v4m-4 4h16l-1.5 9h-13L4 14z" />
+                                </svg>
+                                <h3 class="text-3xl font-serif tracking-wide mb-4">Wear</h3>
+                            </div>
+                            <p class="text-white/80 text-lg opacity-0 group-hover:opacity-100 transition duration-500">
+                                Minimalist fashion with timeless identity and comfort.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 🔹 OUR ESSENCE SECTION -->
+        <section id="essence" class="text-white font-serif overflow-hidden">
+            <!-- Top: Core Values -->
+            <div class="bg-[#244b5a] bg-opacity-70 py-20 px-6 md:px-20 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16">Our Essence</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Value 1 -->
                 <div class="space-y-4">
                     <svg class="mx-auto w-12 h-12 text-white/80" fill="none" stroke="currentColor" stroke-width="1.5"
                         viewBox="0 0 24 24">
@@ -278,9 +217,9 @@
 
         <!-- Middle: Image (Editorial Style) -->
         <div class="relative h-[60vh] md:h-[70vh] w-full">
-            <img src="assets/images/2 dif couch.jpg" alt="Crafted Style"
-                class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/30"></div>
+            <img src="assets/images/2 dif couch.jpg" alt="Crafted lounge seating"
+                class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-black/30" aria-hidden="true"></div>
             <div class="relative z-10 h-full flex items-center justify-center">
                 <h3 class="text-white text-3xl md:text-5xl text-center max-w-3xl font-light italic px-4">
                     "We design with purpose, craft with soul, and build with legacy."
@@ -346,139 +285,122 @@
             </div>
             <div class="absolute inset-0 z-0 bg-black/30 backdrop-blur-sm"></div>
             <!-- 🔹 ELEGANT SCROLL-SNAP PORTFOLIO SECTION -->
-            <section class="relative min-h-screen py-32 px-6 md:px-20 text-white overflow-hidden">
+            <section id="works" class="relative min-h-screen py-32 px-6 md:px-20 text-white overflow-hidden">
                 <!-- Background Blur -->
                 <div class="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
-                    style="background-image: url('assets/images/stack cousine.PNG'); filter: brightness(0.4);">
-                </div>
-                <div class="absolute inset-0 z-10 bg-black/30 backdrop-blur-sm"></div>
+                    style="background-image: url('assets/images/stack cousine.PNG'); filter: brightness(0.4);"
+                    aria-hidden="true"></div>
+                <div class="absolute inset-0 z-10 bg-black/30 backdrop-blur-sm" aria-hidden="true"></div>
 
                 <!-- Main Content -->
                 <div class="relative z-20 max-w-7xl mx-auto text-center">
                     <h2 class="text-5xl md:text-6xl font-bold font-serif mb-20">Our Portfolio</h2>
 
                     <!-- Scrollable Container -->
-                    <div
-                     class="overflow-x-auto px-4 pb-6 hide-scrollbar scroll-smooth">
+                    <div class="overflow-x-auto px-4 pb-6 hide-scrollbar scroll-smooth" role="list">
+                        <div class="portfolio-scroll">
+                            <!-- Slide Template (Repeat This Block for Each Project) -->
 
-                        <div class="portfolio-scroll snap-x snap-mandatory gap-10 hide-scrollbar">
-                
+                            <!-- Project: BARO HOME -->
+                            <article
+                                class="portfolio-card group relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-105"
+                                role="listitem">
+                                <img src="assets/images/top shot baro.jpg" alt="Baro Home interior overview"
+                                    class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                    <h3 class="text-4xl font-serif font-bold mb-2">BARO HOME</h3>
+                                    <p class="text-white/80 text-lg max-w-md px-6">
+                                        Refined living with tailored furniture sets and modern layout design.
+                                    </p>
+                                </div>
+                            </article>
 
-                        <!-- Slide Template (Repeat This Block for Each Project) -->
-                        <!-- Project: BARO HOME -->
-                        <div
-                            class="relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md group transition-transform duration-500 hover:scale-105">
-                            <img src="assets/images/top shot baro.jpg" alt="BARO HOME"
-                                class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50" />
-                            <div
-                                class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                <h3 class="text-4xl font-serif font-bold mb-2">BARO HOME</h3>
-                                <p class="text-white/80 text-lg max-w-md px-6">
-                                    Refined living with tailored furniture sets and modern layout design.
-                                </p>
-                            </div>
+                            <!-- Project: KIBUR COLLEGE -->
+                            <article
+                                class="portfolio-card group relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-105"
+                                role="listitem">
+                                <img src="assets/images/kibur.jpg" alt="Kibur College learning space"
+                                    class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                    <h3 class="text-4xl font-serif font-bold mb-2">KIBUR COLLEGE</h3>
+                                    <p class="text-white/80 text-lg max-w-md px-6">
+                                        Sleek, academic spaces with elevated sophistication and focus.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- Project: BMS MAKEUP SCHOOL -->
+                            <article
+                                class="portfolio-card group relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-105"
+                                role="listitem">
+                                <img src="assets/images/bms makeup.jpg" alt="BMS Makeup School studio"
+                                    class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                    <h3 class="text-4xl font-serif font-bold mb-2">BMS MAKEUP SCHOOL</h3>
+                                    <p class="text-white/80 text-lg max-w-md px-6">
+                                        Beauty education meets luxury interior harmony.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- Project: DUR DAY SPA -->
+                            <article
+                                class="portfolio-card group relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-105"
+                                role="listitem">
+                                <img src="assets/images/dur day.jpg" alt="Dur Day Spa interior"
+                                    class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                    <h3 class="text-4xl font-serif font-bold mb-2">DUR DAY SPA</h3>
+                                    <p class="text-white/80 text-lg max-w-md px-6">
+                                        Serenity, light, and detail — a peaceful spa immersion.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- Project: BUNA TERA -->
+                            <article
+                                class="portfolio-card group relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-105"
+                                role="listitem">
+                                <img src="assets/images/Bunatera Landing.jpg" alt="Buna Tera coffee experience"
+                                    class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                    <h3 class="text-4xl font-serif font-bold mb-2">BUNA TERA</h3>
+                                    <p class="text-white/80 text-lg max-w-md px-6">
+                                        Coffee and culture reimagined with modern ambiance.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- Project: BRIDAL ZONE -->
+                            <article
+                                class="portfolio-card group relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-105"
+                                role="listitem">
+                                <img src="assets/images/bridal velo.jpg" alt="The Bridal Zone boutique display"
+                                    class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50"
+                                    loading="lazy" />
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                    <h3 class="text-4xl font-serif font-bold mb-2">THE BRIDAL ZONE</h3>
+                                    <p class="text-white/80 text-lg max-w-md px-6">
+                                        Timeless elegance for life’s most cherished moments.
+                                    </p>
+                                </div>
+                            </article>
                         </div>
-
-                        <!-- Project: KIBUR COLLEGE -->
-                        <div
-                            class="relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md group transition-transform duration-500 hover:scale-105">
-                            <img src="assets/images/kibur.jpg" alt="Kibur College"
-                                class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50" />
-                            <div
-                                class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                <h3 class="text-4xl font-serif font-bold mb-2">KIBUR COLLEGE</h3>
-                                <p class="text-white/80 text-lg max-w-md px-6">
-                                    Sleek, academic spaces with elevated sophistication and focus.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Project: BMS MAKEUP SCHOOL -->
-                        <div
-                            class="relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md group transition-transform duration-500 hover:scale-105">
-                            <img src="assets/images/bms makeup.jpg" alt="BMS Makeup School"
-                                class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50" />
-                            <div
-                                class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                <h3 class="text-4xl font-serif font-bold mb-2">BMS MAKEUP SCHOOL</h3>
-                                <p class="text-white/80 text-lg max-w-md px-6">
-                                    Beauty education meets luxury interior harmony.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Project: DUR DAY SPA -->
-                        <div
-                            class="relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md group transition-transform duration-500 hover:scale-105">
-                            <img src="assets/images/dur day.jpg" alt="Dur Day Spa"
-                                class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50" />
-                            <div
-                                class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                <h3 class="text-4xl font-serif font-bold mb-2">DUR DAY SPA</h3>
-                                <p class="text-white/80 text-lg max-w-md px-6">
-                                    Serenity, light, and detail — a peaceful spa immersion.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Project: BUNA TERA -->
-                        <div
-                            class="relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md group transition-transform duration-500 hover:scale-105">
-                            <img src="assets/images/Bunatera Landing.jpg" alt="Buna Tera"
-                                class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50" />
-                            <div
-                                class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                <h3 class="text-4xl font-serif font-bold mb-2">BUNA TERA</h3>
-                                <p class="text-white/80 text-lg max-w-md px-6">
-                                    Coffee and culture reimagined with modern ambiance.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Project: BRIDAL ZONE -->
-                        <div
-                            class="relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md group transition-transform duration-500 hover:scale-105">
-                            <img src="assets/images/bridal velo.jpg" alt="Bridal Zone"
-                                class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50" />
-                            <div
-                                class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                <h3 class="text-4xl font-serif font-bold mb-2">THE BRIDAL ZONE</h3>
-                                <p class="text-white/80 text-lg max-w-md px-6">
-                                    Timeless elegance for life’s most cherished moments.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- 🔁 Duplicate First Slide for Loop Illusion -->
-                        <div
-                            class="relative min-w-[80%] md:min-w-[40%] snap-center overflow-hidden rounded-xl bg-white/10 shadow-xl backdrop-blur-md group transition-transform duration-500 hover:scale-105">
-                            <img src="assets/images/top shot baro.jpg" alt="BARO HOME"
-                                class="w-full h-[28rem] md:h-[34rem] object-cover transition duration-700 group-hover:opacity-30 group-hover:blur-sm group-hover:brightness-50" />
-                            <div
-                                class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                <h3 class="text-4xl font-serif font-bold mb-2">BARO HOME</h3>
-                                <p class="text-white/80 text-lg max-w-md px-6">
-                                    Refined living with tailored furniture sets and modern layout design.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </section>
 
-
-            <!-- Optional Scrollbar Hide Utility -->
-            <style>
-                .hide-scrollbar::-webkit-scrollbar {
-                    display: none;
-                }
-
-                .hide-scrollbar {
-                    -ms-overflow-style: none;
-                    scrollbar-width: none;
-                }
-            </style>
 
             <!-- 🔹 FOOTER -->
             <footer class="bg-[rgba(30,26,23,0.6)] text-white py-16 px-6 md:px-20 font-serif backdrop-blur-sm">
@@ -507,7 +429,7 @@
                         </div>
 
                         <!-- Contact Button -->
-                        <a href="#contact"
+                        <a href="mailto:anteniguss21@gmail.com"
                             class="inline-block mt-4 px-6 py-2 border border-white text-white text-sm rounded-full hover:bg-white hover:text-black transition">
                             Contact Us
                         </a>
@@ -521,6 +443,7 @@
                 </div>
             </footer>
         </section> <!-- END WRAPPER -->
+    </main>
 
 
 
