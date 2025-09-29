@@ -50,126 +50,86 @@ h1, h2, h3 {
   animation: fadeIn 2s ease-out both;
 }
 
-/* Background Overlays */
-.bg-blur-overlay {
-  backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* Shared Sections */
-.section {
-  padding: 5rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-}
-.section-title {
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-/* Motto Style */
-.reveal-text {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease-in-out;
-}
-.reveal-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hero Background */
-.bg-hero {
-  background-color: #000;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-/* Motto Section */
-.bg-motto {
-  background-color: #1a1a1a;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-
-/* Shared Background Section */
-.shared-bg {
-  background-image: linear-gradient(to bottom, rgba(28, 25, 23, 0.95), rgba(28, 25, 23, 0.95)),
-                    url('assets/images/left half and 3 cusine.JPG');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Font Weight and Tracking */
-.font-serif {
-  font-family: 'Playfair Display', serif;
-}
-.font-sans {
-  font-family: 'Inter', sans-serif;
-}
-
-/* Cards / Blurred Panels */
-.glass-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-.glass-card:hover {
-  transform: translateY(-10px);
-}
-
-
-/* Tailwind doesn’t include this by default */
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-
-
-
 html {
   scroll-behavior: smooth;
 }
 
+/* Hero layout */
+.hero-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-background,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-background {
+  background-image: url('assets/images/black%20%202.jpg');
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  filter: brightness(0.6);
+  z-index: 0;
+}
+
+.hero-overlay {
+  background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.1), transparent 60%),
+              linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent 60%);
+  z-index: 1;
+}
+
+/* Additional animations */
 @keyframes fadeInSlow {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes revealLeft {
+  from { transform: translateX(-60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes revealRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
 .animate-fade-in-slow {
   animation: fadeInSlow 2s ease-out forwards;
 }
 
-@keyframes scrollPortfolioLoop {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 7)); /* Adjust "7" based on card count */
-  }
+.animate-reveal-left {
+  animation: revealLeft 1.4s ease-out forwards;
 }
 
+.animate-reveal-right {
+  animation: revealRight 1.4s ease-out forwards;
+}
+
+/* Horizontal gallery */
 .portfolio-scroll {
   display: flex;
-  animation: scrollPortfolioLoop 40s linear infinite;
-  will-change: transform;
+  gap: 2.5rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
 }
 
-.portfolio-scroll:hover {
-  animation-play-state: paused;
+.portfolio-card {
+  position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-fade,
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-fade-in-slow,
+  .animate-reveal-left,
+  .animate-reveal-right {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
